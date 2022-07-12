@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:14.4-alpine
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASWORD: password
+      POSTGRES_DB: test
+  
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+
