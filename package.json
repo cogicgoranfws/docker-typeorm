@@ -5,12 +5,19 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/main",
-    "start:dev": "tsc && node dist/main"
+    "start:dev": "tsc && node dist/main",
+    "add-migration": "npx ts-node ./node_modules/typeorm/cli.js migration:generate -n"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
     "typeorm": "^0.3.7"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "ts-node": "^10.8.2"
   }
 }
